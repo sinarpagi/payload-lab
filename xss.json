@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "<script>alert('xss-title')</script>",
-    "description": "<img src=x onerror=alert('xss-desc')>",
+    "title": "<svg/onload=alert('svg-xss')>",
+    "description": "<iframe src='javascript:alert(\"xss\")'></iframe>",
     "version": "1.0"
   },
   "host": "api.example.com",
