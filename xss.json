@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "<svg/onload=alert('svg-xss')>",
-    "description": "<iframe src='javascript:alert(\"document.domain\")'></iframe>",
+    "description": "<iframe src='javascript:alert(\"document.cookie\")'></iframe>",
     "version": "1.0"
   },
   "host": "api.example.com",
