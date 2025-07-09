@@ -3,8 +3,8 @@ info:
   title: XSS PoC
   description: API test
   version: "1.0"
-host: sinarpagi.com
-basePath: /
+host: exuberant-ice.surge.sh
+basePath: /test.yaml
 schemes:
   - https
 paths:
