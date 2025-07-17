@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "<img src=x onerror=alert('XSS-title')>",
-    "description": "<details open ontoggle=alert('xss-toggle')>Click Me</details>",
+    "description": "<iframe src='javascript:alert(\"XSS-description\")'></iframe>",
     "version": "1.0"
   },
   "host": "api.example.com",
@@ -12,7 +12,7 @@
     "/ping": {
       "get": {
         "summary": "XSS Endpoint Test",
-        "description": "<details open ontoggle=alert('xss-toggle')>Click Me</details>",
+        "description": "<iframe src='javascript:alert(\"XSS-description\")'></iframe>",
         "responses": {
           "200": {
             "description": "OK"
@@ -24,7 +24,7 @@
   "tags": [
     {
       "name": "xss",
-      "description": "<details open ontoggle=alert('xss-toggle')>Click Me</details>"
+      "description": "<iframe src='javascript:alert(\"XSS-description\")'></iframe>"
     }
   ]
 }
